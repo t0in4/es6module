@@ -17,6 +17,22 @@ const blogSchema = new Schema({
         votes: Number
     }]
 });
+// if we need validate some field
+/* title:  {
+    type: String,
+    required: true,
+  }, 
+  slug:  {
+    type: String,
+    required: true,
+    lowercase: true, // input data must be lowercase
+  },
+  createdAt: {
+    type: Date,
+    default: () => Date.now(), // arrow function to set default date
+    immutable: true, // impossible to change later
+  },
+  */
 
 const Blog = model('Blog', blogSchema);
 export default Blog;
